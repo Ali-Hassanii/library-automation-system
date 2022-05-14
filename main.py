@@ -3,6 +3,7 @@ from importlib import import_module
 
 
 def install_prerequisites():
+    print('[!] Some of modules are not installed')
     install_license = input('Install prerequisites? [Y/N] ')
     while True:
         if install_license[0] == 'y' or install_license[0] == 'Y':
