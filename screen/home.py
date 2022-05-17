@@ -27,8 +27,8 @@ class Home:
             '\t_2_> Login\n'
             '\t_0_> exit\n\n' +
             Fore.YELLOW +
-            '>>>' +
-            Fore.RESET
+            '>>>',
+            end=Fore.RESET
         )
         while True:
             menu_1 = input().strip()
@@ -62,13 +62,13 @@ class Home:
         command(clear)
         print(
             Back.GREEN + Fore.WHITE +
-            'Login' +
-            Back.RESET + Fore.YELLOW +
-            '\n\n'
+            'Login'
+            '\n\n',
+            end=Back.RESET + Fore.RESET
         )
         while True:
-            _username = input('_username_> ').strip()
-            _password = input('_password_> ').strip()
+            _username = input(Fore.YELLOW + '_username_> ' + Fore.RESET).strip()
+            _password = input(Fore.YELLOW + '_password_> ' + Fore.RESET).strip()
 
             # work with sql database
             try:

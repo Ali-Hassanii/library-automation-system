@@ -18,8 +18,8 @@ class BookMenu:
             '<_0_ Exit' +
             Fore.YELLOW +
             '\n\n'
-            '>>> ' +
-            Fore.RESET
+            '>>> ',
+            end=Fore.RESET
         )
 
         while True:
