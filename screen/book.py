@@ -48,9 +48,10 @@ class BookMenu:
                 _code = input(Fore.YELLOW + 'Code >>>' + Fore.RESET).strip()
                 _writer = input(Fore.YELLOW + 'Writer >>>' + Fore.RESET).strip()
                 _translator = input(Fore.YELLOW + 'Translator >>>' + Fore.RESET).strip()
+                _publisher = input(Fore.YELLOW + 'Publisher >>>' + Fore.RESET).strip()
                 _genre = input(Fore.YELLOW + 'Genre >>>' + Fore.RESET).strip()
 
-                book = Book(_name, _code, _writer, _translator, _genre)
+                book = Book(_name, _code, _writer, _translator, _publisher, _genre)
             case 0:
                 exit(0)
             case _:
