@@ -1,5 +1,6 @@
-from os import system
+from os import system, getcwd
 from importlib import import_module
+from screen.home import Home
 
 
 def install_prerequisites():
@@ -31,3 +32,4 @@ def install_prerequisites():
 
 if __name__ == '__main__':
     install_prerequisites()
+    menu = Home(getcwd())
