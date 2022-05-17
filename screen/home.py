@@ -12,8 +12,8 @@ else:
 
 
 class Home:
-    def __init__(self, _data_folder):
-        self.data_folder = _data_folder
+    def __init__(self, root_path):
+        self.root_path = root_path
         self.connection = None  # database
         self.user = ''
         command(clear)
@@ -72,7 +72,7 @@ class Home:
 
             # work with sql database
             try:
-                self.connection = sqlite3.connect(self.data_folder + '/database/users.sqlite')
+                self.connection = sqlite3.connect(self.root_path + '/database/users.sqlite')
                 cursor = self.connection.cursor()
                 cursor.execute("SELECT * FROM employee WHERE username = ?", (_username,))
                 user = cursor.fetchall()[0]
@@ -80,7 +80,7 @@ class Home:
                 # I know that it is not a good condition
                 if _password == user[1]:
                     print('Logged in')
-                    book_menu = BookMenu()
+                    book_menu = BookMenu(self.root_path)
                 else:
                     print(
                         Fore.RED +
