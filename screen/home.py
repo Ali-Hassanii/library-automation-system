@@ -2,6 +2,8 @@ from colorama import Fore, Back
 from platform import system as plt
 from os import system as command
 import sqlite3
+from screen.book import BookMenu
+
 
 if plt() == 'Windows':
     clear = 'cls'
@@ -77,7 +79,8 @@ class Home:
                 # validating
                 # I know that it is not a good condition
                 if _password == user[1]:
-                    print('logged in')
+                    print('Logged in')
+                    book_menu = BookMenu()
                 else:
                     print(
                         Fore.RED +
